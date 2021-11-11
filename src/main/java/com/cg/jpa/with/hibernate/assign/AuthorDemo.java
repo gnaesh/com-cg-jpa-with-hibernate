@@ -19,23 +19,24 @@ public static void main(String[] args) {
 		
 		tr.begin();
 	
-		Author aut1 = new Author(100, "Sitaram", "Amrut", "Adarkar", 702172713);
-		Author emp2 = new Author(200, "Aniket", "null", "darkar",8888888);
-		Author emp3 = new Author(300, "Nilesh","null","kale",797998989);
+		Author aut1 = new Author(101,"Sitaram","amrut","adarkar",70027727213l);
+		Author emp2 = new Author(102,"aniket","ram","sharma",9969770081l);
+		Author emp3 = new Author(103,"nilesh","sham","gupta",9969507803l);
 		
 		// Inserting record  ---> After insertion we cannot again insert that record
-		em.persist(aut1);  //insert
-//		em.persist(emp2);
+//		em.persist(aut1);  //insert
+		System.out.println(aut1.toString());
+		em.persist(emp2);
 //		em.persist(emp3);
 		
 //		em.remove(emp2);
 		
 		// Updating record
-//		emp1.setFirstName("Rakesh");
+//		emp1.setFirstName("rakesh");
 //		em.merge(emp1);    //Update
 		
 		// Displaying record
-		Author aut = em.find(Author.class, 101);   //Select
+		Author aut = em.find(Author.class, 102);   //Select
 		System.out.println(aut.toString());
 		
 		tr.commit();
